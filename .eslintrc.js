@@ -19,8 +19,5 @@ module.exports = {
     }
   ],
   rules: {
-    'no-var': 'error', // Use 'let' or 'const' instead of 'var'
-    'no-unused-vars': 'warn' // Warn about unused variables
-    // Add more rules as needed
   }
 };
