@@ -1,23 +1,29 @@
 module.exports = {
-    esversion: 6,
   env: {
     browser: true,
     commonjs: true,
-    es2021: true,
-    node: true // Add node environment
+    es2021: true
   },
   extends: 'standard',
   overrides: [
     {
+      env: {
+        node: true
+      },
       files: [
-        '*.js' // Remove '.eslintrc.{js,cjs}' and use '*.js' to match all JavaScript files
+        '.eslintrc.{js,cjs}'
       ],
       parserOptions: {
-        ecmaVersion: 6, // Update to use ECMAScript 6
-        sourceType: 'module' // Specify source type as 'module'
+        sourceType: 'script'
       }
     }
   ],
+  parserOptions: {
+    ecmaVersion: 8 // Update to support ES8 features
+  },
   rules: {
+    'no-console': 'off', // Optional: Turn off 'no-console' rule if you want to allow console usage
+    'no-var': 'error', // Optional: Enforce 'const' and 'let' instead of 'var'
+    'prefer-const': 'error' // Optional: Enforce usage of 'const' where possible
   }
-};
+}
