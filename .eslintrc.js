@@ -2,7 +2,8 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: 'standard',
   overrides: [
@@ -14,13 +15,11 @@ module.exports = {
         '.eslintrc.{js,cjs}'
       ],
       parserOptions: {
-        sourceType: 'script'
+        ecmaVersion: 6, 
+        sourceType: 'module'
       }
     }
   ],
-  parserOptions: {
-    ecmaVersion: 6
-  },
   rules: {
   }
 }
